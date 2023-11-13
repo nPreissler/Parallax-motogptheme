@@ -1,0 +1,336 @@
+@charset "utf-8";
+
+body{
+
+    background: #000;
+
+}
+
+header{
+
+    display: flex;
+    align-items: center;
+    color: rgb(28, 28, 28);
+    text-shadow: 5px 5px 5px #8d8d8da2;
+    text-align: center;
+    border-radius: 5%;
+    margin-bottom: 2em;
+    background-color: rgb(28, 28, 28);
+    animation-name: colorchange;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorchange {
+    0%   {background-color: rgb(0, 0, 0);}
+    25%  {background-color: rgb(34, 34, 34);}
+    50%  {background-color: rgb(21, 21, 21);}
+    100% {background-color: rgb(0, 0, 0);}
+  }
+
+header h1{
+
+    background-color: rgba(0, 0, 0, 0.718);
+    border-radius: 5%;
+    padding: 1em;
+    margin-left: 1%;
+
+}
+
+
+.h-text{
+
+    color: #fff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    
+}
+
+
+h1, h2{
+
+    font-weight: 800;
+    color: rgb(223, 0, 0);;
+
+}
+
+.wrapper{
+
+    width: 100%;
+    margin: 0 auto;
+
+
+}
+
+main{
+
+    display: block;
+    background: #000000;
+
+}
+
+.container{
+
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+    padding: 0 20px;
+    animation: surgir 5s ease-out;
+    animation-timeline: view();
+    animation-range: cover -5% cover 40%;
+    
+
+}
+
+section.modulo p{
+
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.4em;
+    color: #a3a3a3;
+
+}
+
+section.modulo h2{
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+
+}
+
+section.modulo.content{
+
+    padding: 40px 0;
+    background: rgb(0, 0, 0);
+    
+}
+
+section.modulo.parallax{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important; 
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat ;
+    background-size: cover ;
+    background-attachment: fixed;
+
+}
+
+section.modulo.parallax h1{
+
+    color: #929292;
+    text-shadow: 5px 5px 5px #000000a2;
+    font-size: 4em;
+    text-transform: uppercase ;
+    text-align: center;
+    z-index: 50;
+
+}
+
+section.modulo.parallax:after{
+
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0,
+     rgba(0,0,0,0) 50%, #000000 100%);
+
+}
+
+@keyframes surgir {
+    from{
+        opacity: 0;
+        translate: -100vw 0;
+    }
+
+    to{
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+
+
+
+section.modulo.parallax-1{
+
+    background-image: url("https://images.unsplash.com/photo-1551278419-39c59fd4dab9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    border-radius: 3%;
+
+}
+section.modulo.parallax-2{
+
+    background-image: url("https://images.unsplash.com/photo-1623756005176-9490d06c9473?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    border-radius: 3%;
+
+}
+section.modulo.parallax-3 {
+
+    background-image: url("https://images.unsplash.com/photo-1523978577004-06ba57f175aa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    border-radius: 3%;
+
+}
+
+@media all and (max-width: 760px) {
+
+    section.modulo p{
+
+        margin-bottom:10px;
+        text-align: center;
+        font-size: 1em;
+        color: #929292;
+    
+    } 
+
+    section.modulo.parallax h1{
+
+        font-size: 1.5em;
+
+    }
+
+    section.modulo.content{
+        width: 90%;
+        background: #000000;
+    }
+
+
+    .galerytext{
+       visibility: hidden;
+    }
+
+    footer{
+
+        color: #fff;
+        text-size-adjust: larger;
+        left: 45.6%;
+        text-align: center;
+        background-color: rgba(44, 44, 44, 0.233);
+        padding: 2em;
+        border-radius: 5%;
+        margin-top: 3em;
+        max-width: 310px;
+        justify-content: center;
+        background-color: rgb(28, 28, 28);
+        animation-name: colorchangetwo;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    }
+
+
+    .galeria {
+        visibility: hidden;
+    }
+
+
+    
+}
+
+.galeria {
+    display: flex; 
+    height: 20em;
+    margin: 2em;
+    gap: 0.5em;
+
+}
+
+.galeria div {
+    flex: 1; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 9%;
+
+}
+
+.galeria div:hover {
+    flex: 2;
+
+    
+}
+
+.galeria:hover div:not(:hover) {
+    filter: blur(4px) grayscale(100%) opacity(90%) sepia(50%)
+    
+}
+
+footer{
+
+    color: #fff;
+    text-size-adjust: larger;
+    left: 45.6%;
+    text-align: center;
+    background-color: rgba(44, 44, 44, 0.233);
+    padding: 2em;
+    border-radius: 5%;
+    margin-top: 3em;
+    width: 1270px;
+    justify-content: center;
+    background-color: rgb(28, 28, 28);
+    animation-name: colorchangetwo;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+
+.btn{
+    background: #2d0e0e;
+    color: rgb(255, 70, 70);
+    padding: 0.4em;
+    border-radius: 8%;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+
+}
+
+@keyframes colorchangetwo {
+    0%   {background-color: rgb(0, 0, 0);}
+    25%  {background-color: rgb(35, 35, 35);}
+    50%  {background-color: rgb(53, 53, 53);}
+    100% {background-color: rgb(0, 0, 0);}
+  }
+
+.galerytext{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+    background-color: rgb(223, 0, 0);
+    animation-name: colorchangeline;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorchangeline {
+    0%   {background-color: rgb(223, 0, 0);}
+    25%  {background-color: rgb(152, 86, 0);}
+    50%  {background-color: rgb(0, 2, 66);}
+    100% {background-color: rgb(223, 0, 0);}
+
+  }
+  
+
+h1{
+    animation-name: colorchangetittle;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+@keyframes colorchangetittle {
+    0%   {color: rgb(255, 255, 255);}
+    50%  {color: rgb(199, 38, 38);}
+    100% {color: rgb(209, 75, 75);}
+    25%  {color: rgb(255, 255, 255);}
+}
